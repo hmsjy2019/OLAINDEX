@@ -15,6 +15,7 @@ RUN apk update && \
     apk del tzdata && \
     docker-php-ext-install bcmath && \
     git clone --depth 1 https://github.com/WangNingkai/OLAINDEX.git . && \
+    composer update && \
     composer install -vvv && \
     composer run install-app && \
     addgroup -g 900 -S olaindex && \
